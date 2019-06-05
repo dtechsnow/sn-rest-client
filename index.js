@@ -47,7 +47,8 @@ module.exports = function (_config) {
         debug: false,
         silent: false,
         jar: false,
-        gzip: true
+        gzip: true,
+        timeout: 600000
     }, _config);
 
     rp.debug = config.debug;
@@ -85,7 +86,8 @@ module.exports = function (_config) {
             headers: {
                 "User-Agent": userAgent
             },
-            jar: config.jar
+            jar: config.jar,
+            timeout: config.timeout
         });
 
         var index = 0;
